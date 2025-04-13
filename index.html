@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Área do Cliente</h2>
+            <p>Conectando você ao futuro com segurança, inovação e confiança!</p>
+        </div>
+        <div class="right">
+            <form id="contactForm">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" required oninput="formatarNome()">
+                <div id="nameError" class="error-message">Nome inválido! Deve ter no máximo 100 caracteres.</div>
+
+                <label for="cpfCnpj">CPF ou CNPJ:</label>
+                <input type="text" id="cpfCnpj" required maxlength="18" oninput="formatarCPF_CNPJ()">
+                <div id="cpfCnpjError" class="error-message"></div>
+
+                <label for="reason">Razão</label>
+                <select id="reason" required>
+                    <option value="2a via boleto">2ª Via de Boleto</option>
+                    <option value="parcelas atrasadas">Parcelas Atrasadas</option>
+                    <option value="antecipar parcelas">Antecipar Parcelas</option>
+                    <option value="quitacao financiamento">Quitação de Financiamento</option>
+                    <option value="cartao credito">Cartão de Crédito</option>
+                </select>
+
+                <button type="submit">Entrar em Contato</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
